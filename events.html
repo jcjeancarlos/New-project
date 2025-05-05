@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        div{
+            background-color: aqua;
+            height: 180px;
+            width: 180px;
+            line-height: 180px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id='interaction'>
+        Interaction, here please.
+    </div>
+
+    <script>
+        var dv = window.document.getElementById('interaction')
+        dv.addEventListener('click', clicar)
+        dv.addEventListener('mouseenter', mouseentra)
+        dv.addEventListener('mouseout', mousesai)
+
+        function clicar() {            
+            dv.innerText= 'Hi!!!'
+            dv.style.background= 'yellow'
+        }
+        function mouseentra() {
+            dv.innerText= 'Yes, here.'
+            dv.style.background = 'lightgreen'
+        }
+        function mousesai() {
+            dv.innerText= 'Iteraction, here please.'
+            dv.style.background= 'aqua'
+        }
+    </script>
+</body>
+</html>
